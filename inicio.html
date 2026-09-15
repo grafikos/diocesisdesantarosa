@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<article id="noticias" class="noticias_var">
+	<div class="article_conten">
+		<div id="hsvg">
+			<div class="hbsvg">
+<!--				<img src="svg/base_dsr.svg" alt="No se puede mostrar el dibujo" class="cab1" />-->
+			</div> 
+			<div id="slider" class="container">
+				<div class="slider-wrapper">
+					<img src="images/peregrinosLujan2026.jpg" title="" alt="" class="current-slide">
+					<img src="images/masxmenos2026.jpg" title="" alt="">
+					<img src="images/visita_leon_XIV.jpg" title="" alt="">
+				</div>
+			</div>
+		</div>
+		<div class="cajon_titulo noticias_var_titulo">Sitio Web en Rediseño</div>
+		<div class="caja_txt juegos_var_texto">Este sitio Web se encuentra en rediseño y reestructuración, sentimos los inconvenientes que esto pueda causar, en breve estaremos nuevamente brindando el servico de siempre pero innovados en tecnología.<br><br> <b>¡Gracias por su paciencia, Dios lo bendiga!</b>
+		</div>
+<!--		<div class="cajon_x3">
+			<div class="caja_x3">
+				<div class="caja_tit">
+					<div class="titulo_raya"><a>Visita del Papa</a></div>
+				</div>
+				<div class="caja_img">
+					<div><img src="images/papa_leon.jpg" alt=""/></div>
+				</div>
+				<div class="caja_txt">
+					<div><a><b>A todo el Pueblo de Dios:</b><br>Con inmensa alegría y profunda esperanza en el Señor, este Obispado tiene el honor de anunciar oficialmente la Visita Apostólica de Su Santidad, el Papa León XIV, a la República Argentina.</a></div>
+				</div>
+			</div>
+			<div class="caja_x3">
+				<div class="caja_tit">
+					<div class="titulo_raya"><a>Nuevo Obispo</a></div>
+				</div>
+				<div class="caja_img">
+					<div><img src="images/nuevo_obispo.jpg" alt=""/></div>
+				</div>
+				<div class="caja_txt"> 
+					<div><a><b>Luis Darío Martín asumió como obispo de la Diócesis de Santa Rosa.</b><br>En una emotiva ceremonia realizada este viernes por la noche, Luis Darío Martín asumió oficialmente como obispo de la Diócesis de Santa Rosa. La designación fue dispuesta por el papa León XIV tras el traslado de monseñor Raúl Martín a la arquidiócesis de Paraná, en Entre Ríos.</a></div>
+				</div>
+			</div>
+			<div class="caja_x3">
+				<div class="caja_tit">
+					<div class="titulo_raya"><a>Monseñor en E. Castex</a></div>
+				</div>
+				<div class="caja_img">
+					<div><img src="images/h_2026-03-07.jpg" alt=""/></div>
+				</div>
+				<div class="caja_txt">
+					<div>Monseñor Luis Darío Martín fué recibido con alegría por los fieles que participaron de la celebración dominical del 20 de julio, la cual presidió, en la Parroquia Sagrado Corazón de Jesús de Eduardo Castex</div>
+				</div>
+			</div>
+		</div>  -->
+	</div>
+</article>
+<article id="comentarios" class="comentarios_var">
+	<div class="article_conten">
+		<div class="cajon_titulo comentarios"></div>
+		<div class="comentarios_caja cajon_x3"></div>
+	</div>
+</article>
+<script>
+	$(document).ready(function(){
+			$(function() {
+				/** -----------------------------------------
+				 * Modulo del Slider 
+				 -------------------------------------------*/
+				 var SliderModule = (function() {
+					var pb = {};
+					pb.el = $('#slider');
+					pb.items = {
+						panels: pb.el.find('.slider-wrapper > img'),
+					};
+
+					// Interval del Slider
+					var SliderInterval,
+						currentSlider = 0,
+						lengthSlider = pb.items.panels.length,
+						nextSlider = getRandomIntInclusive(0,lengthSlider-1),
+						prenextSlider = nextSlider;
+					 
+					 
+					 if (nextSlider == currentSlider){
+						 nextSlider += 1;
+						 if (nextSlider > lengthSlider-1){
+							 nextSlider = 0;
+						 }
+					 }
+
+					// Constructor del Slider
+					 
+					pb.init = function(settings) {
+						this.settings = settings || {duration: 8000};
+						var items = this.items,
+							lengthPanels = items.panels.length,
+							output = '';
+
+
+						// Activamos nuestro Slider
+						activateSlider();
+						// Eventos para los controles
+
+					};
+					 var conta = 0;
+					// Funcion para activar el Slider
+					var activateSlider = function() {
+						SliderInterval = setInterval(pb.startSlider, pb.settings.duration);
+					};
+
+					// Funcion para la Animacion
+					pb.startSlider = function() {
+						var items = pb.items;
+						items.panels.eq(nextSlider).fadeIn('slow');
+						items.panels.eq(currentSlider).fadeOut('slow');
+
+						// Actualizamos los datos del slider
+						currentSlider = nextSlider;
+						nextSlider = getRandomIntInclusive(0,lengthSlider-1);
+						if (nextSlider == currentSlider){
+							nextSlider += 1;
+							if (nextSlider > lengthSlider-1){
+								nextSlider = 0;
+							}
+						}
+						conta += 1;
+					};
+
+					 if(conta<15){
+						 return pb;
+					 }
+					
+				 }());
+
+				 SliderModule.init({duration: 4000});
+
+			});
+			function getRandomIntInclusive(min, max) {
+			  min = Math.ceil(min);
+			  max = Math.floor(max);
+			  return Math.floor(Math.random() * (max - min + 1) + min);
+			}//		var cw = 0;
+//		$.ajax({
+//			type: "POST",
+//			url: "carga_comentarios.php",
+//			contentType: "application/x-www-form-urlencoded",
+//			beforeSend: function(){
+//			},
+//			success: function(datos){
+//			var dato = datos.split("#");
+//				if(dato[0]==0){
+//					$('#comentarios').hide();
+//				}else{
+//					$('#comentarios').show();
+//					for(cw=1;cw<=dato[0];cw++){
+//						var comen = dato[cw].split("&");
+//						$('.comentarios_caja').append('<div class="caja_x3"><div class="comentarios_nombre">'+comen[1]+'</div><div class="comentarios_texto">'+comen[2]+'</div><div class="comentarios_fecha">'+comen[0]+'</div></div>');
+//					}
+//				}
+//			},
+//			error: function(datos){
+//				mInfo(datos.statusText + datos.responseText,255,0,0);
+//			}
+//		});
+	})
+</script>
