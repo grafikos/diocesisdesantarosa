@@ -1,0 +1,133 @@
+.buscador {
+	font-size: 15px;
+}
+.buscador input {
+	font-size: 1em;
+}
+.lista_clientes {
+	margin-top: 15px;
+}
+.muestra_clientes {
+	margin: 0 auto 15px;
+	width: 98%;
+	height: auto;
+	max-width: 600px;
+}
+.renglon_cliente {
+	margin-bottom: 10px;
+}
+.selec_cliente {
+	width: 100%;
+	text-align: left;
+	margin: 4px auto;
+	font-size: 1.1em;
+	font-weight: normal;
+	cursor: pointer;
+	padding: 3px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+}
+.selec_cliente:hover {
+	color: rgba(255,255,255,1.00);
+	background-color: rgba(14,124,192,1.00);
+	font-weight: bold;
+}
+.lista_items {
+	margin-top: 15px;
+}
+.muestra_items {
+	margin: 0 auto 15px;
+	width: 98%;
+	height: auto;
+	max-width: 600px;
+}
+.renglon_item {
+	margin-bottom: 10px;
+}
+.selec_item {
+	width: 100%;
+	text-align: left;
+	margin: 4px auto;
+	font-size: 1.1em;
+	font-weight: normal;
+	cursor: pointer;
+	padding: 3px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+}
+.selec_item:hover {
+	color: rgba(255,255,255,1.00);
+	background-color: rgba(14,124,192,1.00);
+	font-weight: bold;
+}
+.lista_bcajas {
+	margin-top: 15px;
+}
+.muestra_bcajas {
+	margin: 0 auto 15px;
+	width: 100%;
+	height: auto;
+	max-width: 600px;
+}
+.renglon_bcaja {
+	margin-bottom: 10px;
+}
+.selec_bcaja {
+	width: 100%;
+	text-align: left;
+	margin: 4px auto;
+	font-size: 1.1em;
+	font-weight: normal;
+	cursor: pointer;
+	padding: 3px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+}
+.selec_bcaja:hover {
+	color: rgba(255,255,255,1.00);
+	background-color: rgba(14,124,192,1.00);
+	font-weight: bold;
+}
+.grid-bcajas{
+	margin: 0 auto;
+	display: grid;
+	grid-template-areas: "bcaja bfecha_caja bestado_caja bfcierre_caja bhcierre_caja";
+	grid-template-columns: 40px 135px 135px 135px 135px;
+	grid-auto-rows: 25px;
+	grid-gap: 5px;
+	align-items: center;
+}
+.box-bcajas-caja {
+	grid-area: bcaja;
+	text-align: right;
+	align-items: center;
+}
+.box-bcajas-fecha {
+	grid-area: bfecha_caja;
+	text-align: center;
+	align-items: center;
+}
+.box-bcajas-estado {
+	grid-area: bestado_caja;
+	text-align: left;
+	align-items: center;
+}
+.box-bcajas-fcierre {
+	grid-area: bfcierre_caja;
+	text-align: center;
+	align-items: center;
+}
+.box-bcajas-hcierre {
+	grid-area: bhcierre_caja;
+	text-align: center;
+	align-items: center;
+}
+.bcajas_tit {
+	font-size: 1em;
+	font-weight: bolder;
+}
+@media screen and (min-width: 768px) {
+}

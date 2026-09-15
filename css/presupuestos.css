@@ -1,0 +1,293 @@
+.grid-nuevas{
+	padding: 5px;
+	display: grid;
+	grid-template-columns: repeat(10, 10%);
+	grid-template-areas: ". . nueva nueva nueva nueva nueva nueva . .";
+	grid-gap: 2px;
+}
+.box-nueva {
+	grid-area: nueva;
+	text-align: left;
+	margin-right: 3px;
+}
+.grid-ordenes{
+	padding: 5px;
+	display: grid;
+	grid-template-columns: repeat(10, 10%);
+	grid-template-areas: "orden orden fecha fecha fecha localidad localidad localidad localidad ." ". . nombre nombre nombre nombre nombre nombre nombre nombre";
+	grid-gap: 2px;
+	align-items: center;
+}
+.box-orden {
+	grid-area: orden;
+	text-align: right;
+	margin-right: 3px;
+	align-items: center;
+}
+.box-fecha {
+	grid-area: fecha;
+	text-align: left;
+}
+.box-nombre {
+	grid-area: nombre;
+	text-align: left;
+}
+.box-localidad {
+	grid-area: localidad;
+	text-align: left;
+}
+.select-orden {
+	font-size: 1.1em;
+	font-weight: normal;
+	cursor: pointer;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-o-border-radius: 8px;
+	border-radius: 8px;
+}
+.select-orden:hover {
+	color: rgba(255,255,255,1.00);
+	background-color: rgba(14,124,192,1.00);
+}
+.orden-cb {
+	color: rgba(255,255,255,1.00);
+	background-color: rgba(0,0,0,1.00);
+}
+.cliente-datos {
+	padding: 10px;
+}
+.grid-cliente {
+	width: 95%;
+	display: grid;
+	padding: 2px;
+	grid-template-columns: repeat(8, 12.5%);
+	grid-template-areas: "codigo codigo nombre nombre nombre nombre nombre nombre"
+						 "domicilio domicilio domicilio domicilio telefono telefono telefono telefono"
+						 "cdescuento cdescuento fpago fpago entrega entrega . .";
+	grid-gap: 2px;
+	align-items: left;
+	line-height: 20px;
+}
+.cliente-gremio {
+	background-color: rgba(14,124,192,0.10);
+}
+.box-cliente-codigo {
+	grid-area: codigo;
+	text-align: left;
+}
+.box-cliente-nombre {
+	grid-area: nombre;
+	text-align: left;
+}
+.box-cliente-domicilio {
+	grid-area: domicilio;
+	text-align: left;
+}
+.box-cliente-telefono {
+	grid-area: telefono;
+	text-align: left;
+}
+.box-cliente-dto {
+	grid-area: cdescuento;
+	text-align: left;
+}
+.box-cliente-rgo {
+	grid-area: recargo;
+	text-align: left;
+}
+.box-cliente-ent {
+	grid-area: entrega;
+	text-align: left;
+}
+.box-cliente-fpag {
+	grid-area: fpago;
+	text-align: left;
+}
+.productos-tit {
+	font-size: 14em;
+	font-weight: bolder;
+}
+.grid-producto {
+	margin: 0 auto;
+	width: 98%;
+	padding: 2px;
+	display: grid;
+	grid-template-columns: 23% 33% 33% 11%;
+	grid-template-areas: "descripcion descripcion descripcion descripcion" "cantidad precio descuento unitario total renglon";
+	grid-gap: 2px;
+	align-items: left;
+}
+.prod-base {
+	display: none;
+}
+.prod-activo {
+	margin-bottom: 20px;
+}
+#productos input {
+	font-size: 12.5em;
+}
+.item-base {
+	display: none;
+}
+.agregar_total {
+	text-align: right;
+	margin-right: calc(9% + 5px);
+}
+.agregar_btn {
+	text-align: left;
+	margin-left: 20px;
+}
+.agregar {
+	font-weight: bold;
+	cursor: pointer;
+	color: rgba(255,255,255,1.00);
+	background-color: rgba(0,150,0,1.00);
+	margin: 1px;
+	padding: 3px;
+/*	background: linear-gradient(rgba(0,100,0,1.00), rgba(50,255,50,1.00));
+	border-width: medium;
+	border-style: solid;
+	border-top-color: rgba(50,255,50,1.00);
+	border-right-color: rgba(0,100,0,1.00);
+	border-bottom-color: rgba(0,100,0,1.00);
+	border-left-color: rgba(50,255,50,1.00);*/
+	border-radius: 10px;
+}
+.agregar:hover {
+	color: rgba(255,210,0,1.00);
+}
+.eliminar {
+	font-weight: bold;
+	cursor: pointer;
+	color: rgba(255,255,255,1.00);
+	background-color: rgba(255,0,0,1.00);
+	margin: 1px;
+	padding: 3px;
+/*	background: linear-gradient(rgba(100,0,0,1.00), rgba(255,50,50,1.00));
+	border-width: medium;
+	border-style: solid;
+	border-top-color: rgba(255,50,50,1.00);
+	border-right-color: rgba(100,0,0,1.00);
+	border-bottom-color: rgba(100,0,0,1.00);
+	border-left-color: rgba(255,50,50,1.00);*/
+	border-radius: 10px; 
+}
+.eliminar:hover {
+	color: rgba(255,210,0,1.00);
+}
+.veritem {
+	font-weight: bold;
+	cursor: pointer;
+	color: rgba(255,255,255,1.00);
+	background-color: rgba(100,0,150,1.00);
+	margin: 1px;
+	padding: 3px;
+/*	background: linear-gradient(rgba(150,0,255,1.00), rgba(200,50,255,1.00));
+	border-width: medium;
+	border-style: solid;
+	border-top-color: rgba(255,50,50,1.00);
+	border-right-color: rgba(100,0,0,1.00);
+	border-bottom-color: rgba(100,0,0,1.00);
+	border-left-color: rgba(255,50,50,1.00);*/
+	border-radius: 10px; 
+}
+.veritem:hover {
+	color: rgba(255,210,0,1.00);
+}
+.grid-item {
+	margin: 0 auto;
+	width: 98%;
+	padding: 2px;
+	display: grid;
+	grid-template-columns: 23% 33% 33% 11%;
+	grid-template-areas: "SKU descripcion descripcion descripcion" "cantidad unitario total renglon";
+	grid-gap: 2px;
+	align-items: left;
+}
+.grid-producto input {
+	width: 98%;
+}
+.grid-item input {
+	width: 98%;
+}
+.box-SKU-name {
+	grid-area: SKUn;
+	text-align: right;
+	font-size: 14em;
+	font-weight: bolder;
+}
+.box-SKU {
+	grid-area: SKU;
+	text-align: center;
+}
+.box-descripcion {
+	grid-area: descripcion;
+	text-align: left;
+}
+.box-cantidad {
+	grid-area: cantidad;
+	text-align: right;
+}
+.box-precio {
+	grid-area: precio;
+	text-align: right;
+}
+.box-descuento {
+	grid-area: descuento;
+	text-align: right;
+}
+.box-unitario {
+	grid-area: unitario;
+	text-align: right;
+}
+.box-total {
+	grid-area: total;
+	text-align: right;
+}
+.box-renglon {
+	grid-area: renglon;
+	text-align: center;
+	display: flex;
+}
+.campo-numeros {
+	text-align: right;
+}
+.campo-decimal {
+	text-align: right;
+}
+.campo-ordenes {
+	outline: none;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-bottom: 1px solid black;
+}
+@media screen and (min-width: 768px) {
+	.grid-nuevas {
+		padding: 5px;
+		display: grid;
+		grid-template-columns: repeat(10, 10%);
+		grid-template-areas: ". nueva nueva nueva nueva nueva nueva . . .";
+		grid-gap: 2px;
+	}
+	.grid-ordenes {
+		padding: 5px;
+		display: grid;
+		grid-template-columns: repeat(10, 10%);
+		grid-template-areas: "orden fecha fecha localidad localidad localidad localidad . . ." ". nombre nombre nombre nombre nombre nombre nombre nombre nombre";
+		grid-gap: 2px;
+	}
+	.grid-producto {
+		padding: 5px;
+		grid-template-columns: 45% 5% 12% 5% 12% 12% 9%;
+		grid-template-areas: "descripcion cantidad precio descuento unitario total renglon";
+		align-items: left;
+	}
+	.grid-item {
+		padding: 5px;
+		grid-template-columns: 5% 10% 51% 5% 12% 12% 5%;
+		grid-template-areas: "SKUn SKU descripcion cantidad unitario total renglon";
+		align-items: left;
+	}
+}

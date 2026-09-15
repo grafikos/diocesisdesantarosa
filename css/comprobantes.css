@@ -1,0 +1,1549 @@
+button, input, select, textarea {
+  font-family : inherit;
+}
+.lista_comprobantes {
+	margin-top: 15px;
+}
+.muestra_comprobantes {
+	margin: 0 auto 15px;
+	width: 610px;
+}
+.muestra_comprobantes .select {
+	padding: 5px;
+	font-size: 1.1em;
+	font-weight: normal;
+	margin: 3px 0;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-o-border-radius: 8px;
+	border-radius: 8px;
+}
+.muestra_comprobantes .plus {
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.muestra_opciones {
+	margin: 15px auto;
+	width: 610px;
+}
+.muestra_opciones .plus {
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.muestra_imputar {
+	margin: 0 auto 15px;
+	font-size: 14px;
+	font-weight: normal;
+	width: 800px;
+}
+.muestra_cerrar {
+	margin: 0 auto 15px;
+	font-size: 14px;
+	font-weight: normal;
+	width: 800px;
+}
+.muestra_cajas {
+	margin: 0 auto 15px;
+	font-size: 14px;
+	font-weight: normal;
+	width: 1020px;
+}
+.grid-cajas{
+	margin: 0 auto;
+	display: grid;
+	grid-template-areas: "id_caja fecha_caja hora_caja concepto_caja forma_caja numerod_caja usuario_caja cliente_caja ingreso_caja egreso_caja";
+	grid-template-columns: 20px 70px 55px 200px 120px 130px 130px 50px 100px 100px;
+	grid-auto-rows: 25px;
+	grid-gap: 5px;
+	align-items: center;
+}
+.box-cajas-id {
+	grid-area: id_caja;
+	text-align: right;
+	align-items: center;
+}
+.box-cajas-fecha {
+	grid-area: fecha_caja;
+	text-align: center;
+	align-items: center;
+}
+.box-cajas-hora {
+	grid-area: hora_caja;
+	text-align: center;
+	align-items: center;
+}
+.box-cajas-usuario {
+	grid-area: usuario_caja;
+	text-align: center;
+	align-items: center;
+}
+.box-cajas-concepto {
+	grid-area: concepto_caja;
+	text-align: center;
+	align-items: center;
+}
+.box-cajas-forma {
+	grid-area: forma_caja;
+	text-align: center;
+	align-items: center;
+}
+.box-cajas-entidadd {
+	grid-area: entidadd_caja;
+	text-align: center;
+	align-items: center;
+}
+.box-cajas-numerod {
+	grid-area: numerod_caja;
+	text-align: center;
+	align-items: center;
+}
+.box-cajas-fechad {
+	grid-area: fechad_caja;
+	text-align: center;
+	align-items: center;
+}
+.box-cajas-diferimientod {
+	grid-area: diferimientod_caja;
+	text-align: center;
+	align-items: center;
+}
+.box-cajas-ingreso {
+	grid-area: ingreso_caja;
+	text-align: center;
+	align-items: center;
+}
+.box-cajas-egreso {
+	grid-area: egreso_caja;
+	text-align: center;
+	align-items: center;
+}
+.box-cajas-cliente {
+	grid-area: cliente_caja;
+	text-align: center;
+	align-items: center;
+}
+.cajas_tit {
+	font-size: 1em;
+	font-weight: bolder;
+}
+.ccaja-tit {
+	font-size: 1em;
+	font-weight: bolder;
+}
+.grid-ccaja {
+	margin: 5px auto;
+	width: 800px;
+	line-height: 30px;
+	display: grid;
+	grid-template-areas: "cconcepto cvalor cimporte cusuario cpassword cimputar";
+	grid-template-columns: 200px 100px 100px 150px 125px 100px;
+	grid-gap: 5px;
+	align-items: left;
+}
+.box-concepto {
+	grid-area: cconcepto;
+	text-align: left;
+}
+.box-valor {
+	grid-area: cvalor;
+	text-align: left;
+}
+.box-importe {
+	grid-area: cimporte;
+	text-align: right;
+}
+.box-usuario {
+	grid-area: cusuario;
+	text-align: left;
+}
+.box-password {
+	grid-area: cpassword;
+	text-align: left;
+}
+.box-imputar {
+	grid-area: cimputar;
+}
+.grid-cerrar {
+	margin: 5px auto;
+	width: 800px;
+	display: grid;
+	grid-template-areas: "mcaja icaja vcaja";
+	grid-template-columns: 240px 240px 240px;
+	grid-gap: 40px;
+	align-items: left;
+}
+.box-valor-moneda {
+	grid-area: mcaja;
+	text-align: center;
+}
+.box-valor-imputa {
+	grid-area: icaja;
+	text-align: center;
+}
+.box-valor-caja {
+	grid-area: vcaja;
+	text-align: center;
+}
+.grid-vcaja {
+	margin: 5px auto;
+	width: 240px;
+	line-height: 20px;
+	display: grid;
+	grid-template-areas: "vvalor vimporte";
+	grid-template-columns: 110px 110px;
+	grid-gap: 20px;
+	align-items: left;
+}
+.box-valorC {
+	grid-area: vvalor;
+	text-align: left;
+}
+.box-importeC {
+	grid-area: vimporte;
+	text-align: right;
+}
+.grid-mcaja {
+	margin: 5px auto;
+	width: 240px;
+	line-height: 20px;
+	display: grid;
+	grid-template-areas: "mvalor mcantidad mimporte";
+	grid-template-columns: 40px 50px 110px;
+	grid-gap: 20px;
+	align-items: left;
+}
+.box-valorM {
+	grid-area: mvalor;
+	text-align: right;
+}
+.box-cantidadM {
+	grid-area: mcantidad;
+	text-align: left;
+}
+.box-importeM {
+	grid-area: mimporte;
+	text-align: right;
+}
+.campo-caja {
+	width: calc(100% - 5px);
+	outline: none;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-bottom: 1px solid black;
+}
+.vcaja-tit {
+	font-size: 1em;
+	font-weight: bolder;
+}
+[data-title]:hover:after {
+    opacity: 1;
+    transition: all 0.1s ease 0.5s;
+    visibility: visible;
+}
+[data-title]:after {
+    content: attr(data-title);
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+    position: absolute;
+    padding: 3px 20px;
+    bottom: -1.6em;
+    left: 100%;
+    white-space: nowrap;
+    box-shadow: 1px 1px 3px #222222;
+    opacity: 0;
+    border: 1px solid #111111;
+    z-index: 99999;
+    visibility: hidden;
+    border-radius: 6px;
+}
+[data-title] {
+    position: relative;
+}
+.grid-nuevas {
+	padding: 5px;
+	display: grid;
+	grid-template-columns: repeat(10, 10%);
+	grid-template-areas: ". nueva nueva nueva nueva nueva nueva . . .";
+	grid-gap: 2px;
+}
+.box-nueva {
+	grid-area: nueva;
+	text-align: left;
+	margin-right: 3px;
+}
+.grid-presupuestos{
+	display: grid;
+	grid-template-areas: "presupuesto1" "presupuesto2";
+	grid-template-columns: 600px;
+	align-items: center;
+}
+.box-presupuesto1 {
+	grid-area: presupuesto1;
+	text-align: right;
+	margin-right: 3px;
+	align-items: center;
+}
+.box-presupuesto2 {
+	grid-area: presupuesto2;
+	text-align: right;
+	margin-right: 3px;
+	align-items: center;
+}
+.grid-presupuesto1{
+	display: grid;
+	grid-template-areas: "presupuesto fechaP fechaVenceP blanco bModificaP bAnulaP bVerP bEnviarP bGeneraP";
+	grid-template-columns: 100px 100px 100px 20px 35px 35px 35px 35px 35px;
+	grid-auto-rows: 35px;
+	align-items: center;
+}
+.grid-presupuesto2{
+	display: grid;
+	grid-template-areas: "blanco nombre";
+	grid-template-columns: 100px 500px;
+	grid-auto-rows: 20px;
+	align-items: left;
+}
+.box-presupuesto {
+	grid-area: presupuesto;
+	text-align: right;
+	margin-right: 3px;
+	align-items: center;
+}
+.box-presupuesto-fecha {
+	grid-area: fechaP;
+	text-align: center;
+	align-items: center;
+}
+.box-presupuesto-fechaV {
+	grid-area: fechaVenceP;
+	text-align: center;
+	align-items: center;
+}
+.box-presupuesto-bM {
+	grid-area: bModificaP;
+	text-align: center;
+	align-items: center;
+}
+.box-presupuesto-bA {
+	grid-area: bAnulaP;
+	text-align: center;
+	align-items: center;
+}
+.box-presupuesto-bV {
+	grid-area: bVerP;
+	text-align: center;
+	align-items: center;
+}
+.box-presupuesto-bE {
+	grid-area: bEnviarP;
+	text-align: center;
+	align-items: center;
+}
+.box-presupuesto-bG {
+	grid-area: bGeneraP;
+	text-align: center;
+	align-items: center;
+}
+.grid-ordenes{
+	display: grid;
+	grid-template-areas: "orden1" "orden2";
+	grid-template-columns: 600px;
+	align-items: center;
+}
+.box-orden1 {
+	grid-area: orden1;
+	text-align: right;
+	margin-right: 3px;
+	align-items: center;
+}
+.box-orden2 {
+	grid-area: orden2;
+	text-align: right;
+	margin-right: 3px;
+	align-items: center;
+}
+.grid-orden1{
+	display: grid;
+	grid-template-areas: "orden fechaO fechaVenceO blanco b1O b2O b3O b4O b5O b6O b7O";
+	grid-template-columns: 100px 100px 100px 20px 35px 35px 35px 35px 35px 35px 35px;
+	grid-auto-rows: 35px;
+	align-items: center;
+}
+.grid-orden2{
+	display: grid;
+	grid-template-areas: "blanco nombre";
+	grid-template-columns: 100px 500px;
+	grid-auto-rows: 20px;
+	align-items: left;
+}
+.box-orden {
+	grid-area: orden;
+	text-align: right;
+	margin-right: 3px;
+	align-items: center;
+}
+.box-orden-fecha {
+	grid-area: fechaO;
+	text-align: center;
+	align-items: center;
+}
+.box-orden-fechaV {
+	grid-area: fechaVenceO;
+	text-align: center;
+	align-items: center;
+}
+.box-orden-b1 {
+	grid-area: b1O;
+	text-align: center;
+	align-items: center;
+}
+.box-orden-b2 {
+	grid-area: b2O;
+	text-align: center;
+	align-items: center;
+}
+.box-orden-b3 {
+	grid-area: b3O;
+	text-align: center;
+	align-items: center;
+}
+.box-orden-b4 {
+	grid-area: b4O;
+	text-align: center;
+	align-items: center;
+}
+.box-orden-b5 {
+	grid-area: b5O;
+	text-align: center;
+	align-items: center;
+}
+.box-orden-b6 {
+	grid-area: b6O;
+	text-align: center;
+	align-items: center;
+}
+.box-orden-b7 {
+	grid-area: b7O;
+	text-align: center;
+	align-items: center;
+}
+.orden-cb {
+	color: rgba(255,255,255,1.00);
+	background-color: rgba(80,0,1,1.00);
+}
+.orden-est-3 {
+	color: rgba(0,0,0,1.00);
+	background-color: rgba(164,215,248,1.00);
+}
+.orden-est-2 {
+	color: rgba(0,0,0,1.00);
+	background-color: rgba(95,186,243,1.00);
+}
+.orden-est-1 {
+	color: rgba(0,0,0,1.00);
+	background-color: rgba(38,162,239,1.00);
+}
+.orden-est-0 {
+	color: rgba(255,255,255,1.00);
+	background-color: rgba(14,124,192,1.00);
+}
+.grid-ctacte{
+	display: grid;
+	grid-template-areas: "ctacte1" "ctacte2";
+	grid-template-columns: 600px;
+	align-items: center;
+}
+.box-ctacte1 {
+	grid-area: ctacte1;
+	text-align: right;
+	margin-right: 3px;
+	align-items: center;
+}
+.box-ctacte2 {
+	grid-area: ctacte2;
+	text-align: right;
+	margin-right: 3px;
+	align-items: center;
+}
+.grid-ctacte1{
+	display: grid;
+	grid-template-areas: "cliente nombre";
+	grid-template-columns: 100px 500px;
+	grid-auto-rows: 25px;
+	align-items: left;
+}
+.grid-ctacte2{
+	display: grid;
+	grid-template-areas: "cliente b1CC b2CC b3CC b4CC blanco saldo";
+	grid-template-columns: 100px 35px 35px 35px 35px 160px 200px;
+	grid-auto-rows: 35px;
+	align-items: center;
+}
+.box-ctacte-saldo {
+	grid-area: saldo;
+	text-align: right;
+	margin-right: 3px;
+	align-items: center;
+}
+.box-ctacte-b1 {
+	grid-area: b1CC;
+	text-align: center;
+	align-items: center;
+}
+.box-ctacte-b2 {
+	grid-area: b2CC;
+	text-align: center;
+	align-items: center;
+}
+.box-ctacte-b3 {
+	grid-area: b3CC;
+	text-align: center;
+	align-items: center;
+}
+.box-ctacte-b4 {
+	grid-area: b4CC;
+	text-align: center;
+	align-items: center;
+}
+.box-blanco {
+	grid-area: blanco;
+	text-align: left;
+}
+.box-cliente {
+	grid-area: cliente;
+	text-align: center;
+}
+.box-nombre {
+	grid-area: nombre;
+	text-align: left;
+}
+.ctacte-cb {
+	color: rgba(255,255,255,1.00);
+	background-color: rgba(0,0,0,1.00);
+	padding: 3px;
+	width: 85px;
+	font-size: 0.6em;
+	font-weight: bold;
+	text-align: center;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-o-border-radius: 8px;
+	border-radius: 8px;
+}
+.comprobante-cb {
+	color: rgba(255,255,255,1.00);
+	background-color: rgba(0,0,0,1.00);
+	padding: 3px;
+	width: 85px;
+	font-size: 0.6em;
+	font-weight: bold;
+	text-align: center;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-o-border-radius: 8px;
+	border-radius: 8px;
+}
+.ctacte-est-0 {
+	color: rgba(255,255,255,1.00);
+	background-color: rgba(14,124,192,1.00);
+}
+.ctacte-est-1 {
+	color: rgba(255,255,255,1.00);
+	background-color: rgba(200,10,10,1.00);
+}
+.ctacte-est-2 {
+	color: rgba(255,255,255,1.00);
+	background-color: rgba(20,100,0,1.00);
+}
+.ctacte_tit {
+	font-size: 14em;
+	font-weight: bolder;
+}
+.lista_ctacte {
+	margin-top: 15px;
+}
+.muestra_ctacte {
+	margin: 0 auto 10px;
+	width: 750px;
+}
+.muestra_ctacte .noselect {
+	padding: 0 5px;
+	font-size: 13em;
+	font-weight: normal;
+	margin: 1px 0;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-o-border-radius: 8px;
+	border-radius: 8px;
+}
+.muestra_ctacte .select {
+	padding: 0 5px;
+	font-size: 13em;
+	font-weight: normal;
+	margin: 1px 0;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-o-border-radius: 8px;
+	border-radius: 8px;
+}
+.muestra_ctacte .select:hover {
+	background-color: rgba(0,100,255,0.30);
+	cursor: pointer;
+}
+.muestra_ctacte .plus {
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.grid-ctacte-ver{
+	margin: 0 auto;
+	display: grid;
+	grid-template-areas: "comprobante_cc fecha_cc vencimiento_cc debe_cc haber_cc saldo_cc";
+	grid-template-columns: 120px 100px 100px 120px 120px 120px;
+	grid-auto-rows: 25px;
+	align-items: center;
+}
+.box-ctacte-ver1 {
+	grid-area: comprobante_cc;
+	text-align: right;
+	margin-right: 3px;
+	align-items: center;
+}
+.box-ctacte-ver2 {
+	grid-area: fecha_cc;
+	text-align: center;
+	align-items: center;
+}
+.box-ctacte-ver3 {
+	grid-area: vencimiento_cc;
+	text-align: center;
+	align-items: center;
+}
+.box-ctacte-ver4 {
+	grid-area: debe_cc;
+	text-align: center;
+	align-items: center;
+}
+.box-ctacte-ver5 {
+	grid-area: haber_cc;
+	text-align: center;
+	align-items: center;
+}
+.box-ctacte-ver6 {
+	grid-area: saldo_cc;
+	text-align: center;
+	align-items: center;
+}
+.box-ctacte-ver7 {
+	grid-area: opciones_cc;
+	text-align: center;
+	align-items: center;
+}
+.ctacte-ver-0 {
+	color: rgba(0,0,0,1.00);
+/*	background-color: rgba(14,124,192,1.00);*/
+}
+.ctacte-ver-1 {
+	color: rgba(200,10,10,1.00);
+/*	background-color: rgba(200,10,10,1.00);*/
+}
+.ctacte-ver-2 {
+	color: rgba(20,100,0,1.00);
+/*	background-color: rgba(20,100,0,1.00);*/
+}
+.cliente-datos {
+	padding: 10px;
+	margin: 0px auto;
+}
+.grid-cliente {
+	width: 95%;
+	display: grid;
+	padding: 2px;
+	grid-template-columns: repeat(8, 12.5%);
+	grid-template-areas: "codigo codigo nombre nombre nombre nombre nombre nombre"
+						 "domicilio domicilio domicilio domicilio telefono telefono telefono telefono"
+						 "cdescuento cdescuento fpago fpago entrega entrega . .";
+	grid-gap: 2px;
+	align-items: left;
+	line-height: 20px;
+}
+.cliente-gremio {
+	background-color: rgba(14,124,192,0.10);
+}
+.box-cliente-codigo {
+	grid-area: codigo;
+	text-align: left;
+}
+.box-cliente-nombre {
+	grid-area: nombre;
+	text-align: left;
+}
+.box-cliente-domicilio {
+	grid-area: domicilio;
+	text-align: left;
+}
+.box-cliente-telefono {
+	grid-area: telefono;
+	text-align: left;
+}
+.box-cliente-dto {
+	grid-area: cdescuento;
+	text-align: left;
+}
+.box-cliente-rgo {
+	grid-area: recargo;
+	text-align: left;
+}
+.box-cliente-ent {
+	grid-area: entrega;
+	text-align: left;
+}
+.box-cliente-fpag {
+	grid-area: fpago;
+	text-align: left;
+}
+.productos-tit {
+	font-size: 14em;
+	font-weight: bolder;
+}
+.grid-producto {
+	margin: 0 auto;
+	width: 98%;
+	padding: 2px;
+	display: grid;
+	grid-template-columns: 45% 5% 12% 5% 12% 12% 9%;
+	grid-template-areas: "descripcion cantidad precio descuento unitario total renglon";
+	grid-gap: 2px;
+	align-items: left;
+}
+.prod-base {
+	display: none;
+}
+.prod-activo {
+	margin-bottom: 20px;
+}
+#productos input {
+	font-size: 12.5em;
+}
+.item-base {
+	display: none;
+}
+.agregar_total {
+	text-align: right;
+	margin-right: calc(9% + 5px);
+}
+.lorden_total {
+	font-size: 15em;
+	font-weight: bold;
+}
+.agregar_btn {
+	text-align: left;
+	margin-left: 20px;
+}
+.grid-item {
+	margin: 0 auto;
+	width: 98%;
+	padding: 2px;
+	display: grid;
+	grid-template-columns: 5% 10% 51% 5% 12% 12% 5%;
+	grid-template-areas: "SKUn SKU descripcion cantidad unitario total renglon";
+	grid-gap: 2px;
+	align-items: left;
+}
+.grid-producto input {
+	width: 98%;
+}
+.grid-item input {
+	width: 98%;
+}
+.box-SKU-name {
+	grid-area: SKUn;
+	text-align: right;
+	font-size: 14em;
+	font-weight: bolder;
+}
+.box-SKU {
+	grid-area: SKU;
+	text-align: center;
+}
+.box-descripcion {
+	grid-area: descripcion;
+	text-align: left;
+}
+.box-cantidad {
+	grid-area: cantidad;
+	text-align: right;
+}
+.box-precio {
+	grid-area: precio;
+	text-align: right;
+}
+.box-descuento {
+	grid-area: descuento;
+	text-align: right;
+}
+.box-unitario {
+	grid-area: unitario;
+	text-align: right;
+}
+.box-total {
+	grid-area: total;
+	text-align: right;
+}
+.box-renglon {
+	grid-area: renglon;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+}
+.grid-nota-credito {
+	margin: 0 auto 20px;
+	width: 700px;
+	display: grid;
+	grid-template-columns: 700px;
+	grid-template-areas: "cancelacomp" "notacredito";
+	grid-gap: 10px;
+	text-align: center;
+}
+.box-nota-credito {
+	margin: 0 auto;
+	grid-area: notacredito;
+	text-align: center;
+}
+.grid-recibo {
+	margin: 0 auto 20px;
+	width: 700px;
+	display: grid;
+	grid-template-columns: 700px;
+	grid-template-areas: "cancelacomp" "recibopago";
+	grid-gap: 10px;
+	text-align: center;
+}
+.box-cancela-comp {
+	margin: 0 auto;
+	grid-area: cancelacomp;
+	text-align: center;
+}
+.box-recibo-pago {
+	margin: 0 auto;
+	grid-area: recibopago;
+	text-align: center;
+}
+.grid-recibo-cancela {
+	margin: 5px auto;
+	width: 600px;
+	display: grid;
+	grid-template-columns: 100px 80px 80px 100px 90px 20px 100px;
+	grid-template-areas: "tncomp fcomp fvcomp impcomp intcomp mcomp apcomp";
+	grid-gap: 5px;
+	align-items: left;
+}
+.box-cancela-tncomp {
+	grid-area: tncomp;
+	text-align: left;
+}
+.box-cancela-fcomp {
+	grid-area: fcomp;
+	text-align: center;
+}
+.box-cancela-fvcomp {
+	grid-area: fvcomp;
+	text-align: center;
+}
+.box-cancela-impcomp {
+	grid-area: impcomp;
+	text-align: right;
+}
+.box-cancela-intcomp {
+	grid-area: intcomp;
+	text-align: right;
+}
+.box-cancela-mcomp {
+	grid-area: mcomp;
+	text-align: center;
+}
+.box-cancela-apcomp {
+	grid-area: apcomp;
+	text-align: right;
+}
+.cancela-base {
+	display: none;
+}
+.cancela-activo {
+	margin-bottom: 10px;
+}
+.grid-recibo-pago {
+	margin: 5px auto;
+	width: 660px;
+	display: grid;
+	grid-template-columns: 110px 110px 90px 100px 100px 100px 20px;
+	grid-template-areas: "fppago pago1 pago2 pago3 pago4 imppago elipago";
+	grid-gap: 5px;
+	align-items: left;
+}
+.box-pago-fpcomp {
+	grid-area: fppago;
+	text-align: left;
+}
+.box-pago-1comp {
+	grid-area: pago1;
+	text-align: left;
+}
+.box-pago-2comp {
+	grid-area: pago2;
+	text-align: left;
+}
+.box-pago-3comp {
+	grid-area: pago3;
+	text-align: left;
+}
+.box-pago-4comp {
+	grid-area: pago4;
+	text-align: left;
+}
+.box-pago-fvcomp {
+	grid-area: fvpago;
+	text-align: center;
+}
+.box-pago-elicomp {
+	grid-area: elipago;
+	text-align: center;
+}
+.box-pago-impcomp {
+	grid-area: imppago;
+	text-align: right;
+}
+.pago-base {
+	display: none;
+}
+.pago-activo {
+	margin-bottom: 5px;
+}
+.grid-dato-credito {
+	margin: 5px auto;
+	width: 660px;
+	display: grid;
+	grid-template-columns: 530px 100px;
+	grid-template-areas: "descnc impnc";
+	grid-gap: 5px;
+	align-items: left;
+}
+.box-nc-desc {
+	grid-area: descnc;
+	text-align: left;
+}
+.box-nc-imp {
+	grid-area: impnc;
+	text-align: right;
+}
+.nc-base {
+	display: none;
+}
+.nc-activo {
+	margin-bottom: 5px;
+}
+.grid-nota-debito {
+	margin: 0 auto 20px;
+	width: 700px;
+	display: grid;
+	grid-template-columns: 700px;
+	grid-template-areas: "afectacomp" "notadebito";
+	grid-gap: 10px;
+	text-align: center;
+}
+.box-afecta {
+	margin: 0 auto;
+	grid-area: afectacomp;
+	text-align: center;
+}
+.box-nota-debito {
+	margin: 0 auto;
+	grid-area: notadebito;
+	text-align: center;
+}
+.grid-nd-afecta {
+	margin: 5px auto;
+	width: 440px;
+	display: grid;
+	grid-template-columns: 100px 80px 100px 20px 100px;
+	grid-template-areas: "tncred fcred impcred mcred apcred";
+	grid-gap: 5px;
+	align-items: left;
+}
+.box-afecta-tncomp {
+	grid-area: tncred;
+	text-align: left;
+}
+.box-afecta-fcomp {
+	grid-area: fcred;
+	text-align: center;
+}
+.box-afecta-impcomp {
+	grid-area: impcred;
+	text-align: right;
+}
+.box-afecta-mcomp {
+	grid-area: mcred;
+	text-align: center;
+}
+.box-afecta-apcomp {
+	grid-area: apcred;
+	text-align: right;
+}
+.afecta-base {
+	display: none;
+}
+.afecta-activo {
+	margin-bottom: 10px;
+}
+.grid-dato-debito {
+	margin: 5px auto;
+	width: 680px;
+	display: grid;
+	grid-template-columns: 530px 100px 20px;
+	grid-template-areas: "descnd impnd elind";
+	grid-gap: 5px;
+	align-items: left;
+}
+.box-nd-desc {
+	grid-area: descnd;
+	text-align: left;
+}
+.box-nd-imp {
+	grid-area: impnd;
+	text-align: right;
+}
+.box-nd-eli {
+	grid-area: elind;
+	text-align: center;
+}
+.nd-base {
+	display: none;
+}
+.nd-activo {
+	margin-bottom: 5px;
+}
+#productos input {
+	font-size: 12.5em;
+}
+.agregar_total_cancela {
+	text-align: right;
+	margin-right: 0px;
+}
+.agregar_total_pago {
+	text-align: right;
+	margin-right: 15px;
+}
+.campo-numeros {
+	text-align: right;
+}
+.campo-decimal {
+	text-align: right;
+}
+.campo-fechas {
+	text-align: center;
+}
+.campo-ordenes {
+	outline: none;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-bottom: 1px solid black;
+}
+.campo-recibo {
+	width: calc(100% - 5px);
+	outline: none;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-bottom: 1px solid black;
+}
+.recibo-cancela-tit {
+	font-size: 14em;
+	font-weight: bolder;
+}
+.lcancela_total {
+	font-size: 15em;
+	font-weight: bold;
+}
+.recibo-pago-tit {
+	font-size: 14em;
+	font-weight: bolder;
+}
+.lpago_total {
+	font-size: 15em;
+	font-weight: bold;
+}
+.nota-credito-tit {
+	font-size: 14em;
+	font-weight: bolder;
+}
+.nota-debito-tit {
+	font-size: 14em;
+	font-weight: bolder;
+}
+.lnc_total {
+	font-size: 15em;
+	font-weight: bold;
+}
+.lnd_total {
+	font-size: 15em;
+	font-weight: bold;
+}
+.campo-cancela-total {
+	outline: none;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-bottom: 1px solid black;
+	text-align: right;
+}
+.campo-pago-total {
+	outline: none;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-bottom: 1px solid black;
+	text-align: right;
+}
+.campo-nc-total {
+	outline: none;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-bottom: 1px solid black;
+	text-align: right;
+}
+.campo-nd-total {
+	outline: none;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-bottom: 1px solid black;
+	text-align: right;
+}
+.agregar {
+	font-weight: bold;
+	cursor: pointer;
+	color: rgba(255,255,255,1.00);
+	background-color: rgba(0,150,0,1.00);
+	margin: 1px;
+	padding: 3px;
+/*	background: linear-gradient(rgba(0,100,0,1.00), rgba(50,255,50,1.00));
+	border-width: medium;
+	border-style: solid;
+	border-top-color: rgba(50,255,50,1.00);
+	border-right-color: rgba(0,100,0,1.00);
+	border-bottom-color: rgba(0,100,0,1.00);
+	border-left-color: rgba(50,255,50,1.00);*/
+	border-radius: 10px;
+}
+.agregar:hover {
+	color: rgba(255,210,0,1.00);
+}
+.nuevo {
+	font-weight: bold;
+	cursor: pointer;
+	color: rgba(255,255,255,1.00);
+	background-color: rgba(14,124,192,1.00);
+	margin: 1px;
+	padding: 3px;
+/*	background: linear-gradient(rgba(0,100,0,1.00), rgba(50,255,50,1.00));
+	border-width: medium;
+	border-style: solid;
+	border-top-color: rgba(50,255,50,1.00);
+	border-right-color: rgba(0,100,0,1.00);
+	border-bottom-color: rgba(0,100,0,1.00);
+	border-left-color: rgba(50,255,50,1.00);*/
+	border-radius: 10px;
+}
+.nuevo:hover {
+	color: rgba(255,210,0,1.00);
+}
+.eliminar {
+	font-weight: bold;
+	cursor: pointer;
+	color: rgba(255,255,255,1.00);
+	background-color: rgba(255,0,0,1.00);
+	margin: 1px;
+	padding: 3px;
+/*	background: linear-gradient(rgba(100,0,0,1.00), rgba(255,50,50,1.00));
+	border-width: medium;
+	border-style: solid;
+	border-top-color: rgba(255,50,50,1.00);
+	border-right-color: rgba(100,0,0,1.00);
+	border-bottom-color: rgba(100,0,0,1.00);
+	border-left-color: rgba(255,50,50,1.00);*/
+	border-radius: 10px; 
+}
+.eliminar:hover {
+	color: rgba(255,210,0,1.00);
+}
+.anular {
+	font-weight: bold;
+	cursor: pointer;
+	color: rgba(255,255,255,1.00);
+	background-color: rgba(255,0,0,1.00);
+	margin: 1px;
+	padding: 3px;
+/*	background: linear-gradient(rgba(100,0,0,1.00), rgba(255,50,50,1.00));
+	border-width: medium;
+	border-style: solid;
+	border-top-color: rgba(255,50,50,1.00);
+	border-right-color: rgba(100,0,0,1.00);
+	border-bottom-color: rgba(100,0,0,1.00);
+	border-left-color: rgba(255,50,50,1.00);*/
+	border-radius: 10px; 
+}
+.anular:hover {
+	color: rgba(255,210,0,1.00);
+}
+.modificar {
+	font-weight: bold;
+	cursor: pointer;
+	color: rgba(255,255,255,1.00);
+	background-color: rgba(0,150,0,1.00);
+	margin: 1px;
+	padding: 3px;
+/*	background: linear-gradient(rgba(150,0,255,1.00), rgba(200,50,255,1.00));
+	border-width: medium;
+	border-style: solid;
+	border-top-color: rgba(255,50,50,1.00);
+	border-right-color: rgba(100,0,0,1.00);
+	border-bottom-color: rgba(100,0,0,1.00);
+	border-left-color: rgba(255,50,50,1.00);*/
+	border-radius: 10px; 
+}
+.modificar:hover {
+	color: rgba(255,210,0,1.00);
+}
+.ver {
+	font-weight: bold;
+	cursor: pointer;
+	color: rgba(255,255,255,1.00);
+	background-color: rgba(0,0,150,1.00);
+	margin: 1px;
+	padding: 3px;
+/*	background: linear-gradient(rgba(150,0,255,1.00), rgba(200,50,255,1.00));
+	border-width: medium;
+	border-style: solid;
+	border-top-color: rgba(255,50,50,1.00);
+	border-right-color: rgba(100,0,0,1.00);
+	border-bottom-color: rgba(100,0,0,1.00);
+	border-left-color: rgba(255,50,50,1.00);*/
+	border-radius: 10px; 
+}
+.ver:hover {
+	color: rgba(255,210,0,1.00);
+}
+.enviar {
+/*	font-weight: bold; */
+	cursor: pointer;
+	color: rgba(255,255,255,1.00);
+	background-color: rgba(200,0,255,1.00);
+	margin: 1px;
+	padding: 3px;
+/*	background: linear-gradient(rgba(150,0,255,1.00), rgba(200,50,255,1.00));
+	border-width: medium;
+	border-style: solid;
+	border-top-color: rgba(255,50,50,1.00);
+	border-right-color: rgba(100,0,0,1.00);
+	border-bottom-color: rgba(100,0,0,1.00);
+	border-left-color: rgba(255,50,50,1.00);*/
+	border-radius: 10px; 
+}
+.enviar:hover {
+	color: rgba(255,210,0,1.00);
+}
+.enviado {
+/*	font-weight: bold; */
+	cursor: pointer;
+	color: rgba(255,255,255,1.00);
+	background-color: rgba(65,0,125,1.00);
+	margin: 1px;
+	padding: 3px;
+/*	background: linear-gradient(rgba(150,0,255,1.00), rgba(200,50,255,1.00));
+	border-width: medium;
+	border-style: solid;
+	border-top-color: rgba(255,50,50,1.00);
+	border-right-color: rgba(100,0,0,1.00);
+	border-bottom-color: rgba(100,0,0,1.00);
+	border-left-color: rgba(255,50,50,1.00);*/
+	border-radius: 10px; 
+}
+.enviado:hover {
+	color: rgba(255,210,0,1.00);
+}
+.generar {
+	font-weight: bold;
+	cursor: pointer;
+	color: rgba(255,255,255,1.00);
+	background-color: rgba(255,150,0,1.00);
+	margin: 1px;
+	padding: 3px;
+/*	background: linear-gradient(rgba(150,0,255,1.00), rgba(200,50,255,1.00));
+	border-width: medium;
+	border-style: solid;
+	border-top-color: rgba(255,50,50,1.00);
+	border-right-color: rgba(100,0,0,1.00);
+	border-bottom-color: rgba(100,0,0,1.00);
+	border-left-color: rgba(255,50,50,1.00);*/
+	border-radius: 10px; 
+}
+.generar:hover {
+	color: rgba(0,150,0,1.00);
+}
+.procesar {
+	font-weight: bold;
+	cursor: pointer;
+	color: rgba(255,255,255,1.00);
+	background-color: rgba(255,100,0,1.00);
+	margin: 1px;
+	padding: 3px;
+/*	background: linear-gradient(rgba(150,0,255,1.00), rgba(200,50,255,1.00));
+	border-width: medium;
+	border-style: solid;
+	border-top-color: rgba(255,50,50,1.00);
+	border-right-color: rgba(100,0,0,1.00);
+	border-bottom-color: rgba(100,0,0,1.00);
+	border-left-color: rgba(255,50,50,1.00);*/
+	border-radius: 10px; 
+}
+.procesar:hover {
+	color: rgba(255,200,0,1.00);
+}
+.finalizar {
+	font-weight: bold;
+	cursor: pointer;
+	color: rgba(255,255,255,1.00);
+	background-color: rgba(255,50,0,1.00);
+	margin: 1px;
+	padding: 3px;
+/*	background: linear-gradient(rgba(150,0,255,1.00), rgba(200,50,255,1.00));
+	border-width: medium;
+	border-style: solid;
+	border-top-color: rgba(255,50,50,1.00);
+	border-right-color: rgba(100,0,0,1.00);
+	border-bottom-color: rgba(100,0,0,1.00);
+	border-left-color: rgba(255,50,50,1.00);*/
+	border-radius: 10px; 
+}
+.finalizar:hover {
+	color: rgba(255,150,0,1.00);
+}
+.entregar {
+	font-weight: bold;
+	cursor: pointer;
+	color: rgba(255,255,255,1.00);
+	background-color: rgba(0,150,0,1.00);
+	margin: 1px;
+	padding: 3px;
+/*	background: linear-gradient(rgba(150,0,255,1.00), rgba(200,50,255,1.00));
+	border-width: medium;
+	border-style: solid;
+	border-top-color: rgba(255,50,50,1.00);
+	border-right-color: rgba(100,0,0,1.00);
+	border-bottom-color: rgba(100,0,0,1.00);
+	border-left-color: rgba(255,50,50,1.00);*/
+	border-radius: 10px; 
+}
+.entregar:hover {
+	color: rgba(255,230,0,1.00);
+}
+.veritem {
+	font-weight: bold;
+	cursor: pointer;
+	color: rgba(255,255,255,1.00);
+	background-color: rgba(100,0,150,1.00);
+	margin: 1px;
+	padding: 3px;
+/*	background: linear-gradient(rgba(150,0,255,1.00), rgba(200,50,255,1.00));
+	border-width: medium;
+	border-style: solid;
+	border-top-color: rgba(255,50,50,1.00);
+	border-right-color: rgba(100,0,0,1.00);
+	border-bottom-color: rgba(100,0,0,1.00);
+	border-left-color: rgba(255,50,50,1.00);*/
+	border-radius: 10px; 
+}
+.veritem:hover {
+	color: rgba(255,210,0,1.00);
+}
+.recibo {
+	font-weight: bold;
+	cursor: pointer;
+	color: rgba(255,255,255,1.00);
+	background-color: rgba(0,150,0,1.00);
+	margin: 1px;
+	padding: 3px;
+/*	background: linear-gradient(rgba(150,0,255,1.00), rgba(200,50,255,1.00));
+	border-width: medium;
+	border-style: solid;
+	border-top-color: rgba(255,50,50,1.00);
+	border-right-color: rgba(100,0,0,1.00);
+	border-bottom-color: rgba(100,0,0,1.00);
+	border-left-color: rgba(255,50,50,1.00);*/
+	border-radius: 10px; 
+}
+.recibo:hover {
+	color: rgba(255,210,0,1.00);
+}
+.nota-credito {
+	font-weight: bold;
+	cursor: pointer;
+	color: rgba(255,255,255,1.00);
+	background-color: rgba(0,100,50,1.00);
+	margin: 1px;
+	padding: 3px;
+/*	background: linear-gradient(rgba(150,0,255,1.00), rgba(200,50,255,1.00));
+	border-width: medium;
+	border-style: solid;
+	border-top-color: rgba(255,50,50,1.00);
+	border-right-color: rgba(100,0,0,1.00);
+	border-bottom-color: rgba(100,0,0,1.00);
+	border-left-color: rgba(255,50,50,1.00);*/
+	border-radius: 10px; 
+}
+.nota-credito:hover {
+	color: rgba(255,210,0,1.00);
+}
+.nota-debito {
+	font-weight: bold;
+	cursor: pointer;
+	color: rgba(255,255,255,1.00);
+	background-color: rgba(255,0,0,1.00);
+	margin: 1px;
+	padding: 3px;
+/*	background: linear-gradient(rgba(150,0,255,1.00), rgba(200,50,255,1.00));
+	border-width: medium;
+	border-style: solid;
+	border-top-color: rgba(255,50,50,1.00);
+	border-right-color: rgba(100,0,0,1.00);
+	border-bottom-color: rgba(100,0,0,1.00);
+	border-left-color: rgba(255,50,50,1.00);*/
+	border-radius: 10px; 
+}
+.nota-debito:hover {
+	color: rgba(255,210,0,1.00);
+}
+.btnD {
+	font-weight: bold;
+	font-size: 14px;
+	cursor: pointer;
+	margin: 1px;
+	padding: 1px;
+/*	background: linear-gradient(rgba(150,0,255,1.00), rgba(200,50,255,1.00));
+	border-width: medium;
+	border-style: solid;
+	border-top-color: rgba(255,50,50,1.00);
+	border-right-color: rgba(100,0,0,1.00);
+	border-bottom-color: rgba(100,0,0,1.00);
+	border-left-color: rgba(255,50,50,1.00);*/
+	border-radius: 10px; 
+}
+.btn {
+	font-weight: bold;
+	font-size: 14px;
+	cursor: pointer;
+	margin: 1px;
+	padding: 5px;
+/*	background: linear-gradient(rgba(150,0,255,1.00), rgba(200,50,255,1.00));
+	border-width: medium;
+	border-style: solid;
+	border-top-color: rgba(255,50,50,1.00);
+	border-right-color: rgba(100,0,0,1.00);
+	border-bottom-color: rgba(100,0,0,1.00);
+	border-left-color: rgba(255,50,50,1.00);*/
+	border-radius: 10px; 
+}
+.btn-celeste {
+	color: rgba(255,255,255,1.00);
+	background-color: rgba(14,124,192,1.00);
+}
+.btn-celeste:hover {
+	color: rgba(255,210,0,1.00);
+}
+.btn-azul {
+	color: rgba(255,255,255,1.00);
+	background-color: rgba(0,0,150,1.00);
+}
+.btn-azul:hover {
+	color: rgba(255,210,0,1.00);
+}
+.btn-verde {
+	color: rgba(255,255,255,1.00);
+	background-color: rgba(0,150,0,1.00);
+}
+.btn-verde:hover {
+	color: rgba(255,210,0,1.00);
+}
+.btn-naranja {
+	color: rgba(255,255,255,1.00);
+	background-color: rgba(255,100,0,1.00);
+}
+.btn-naranja:hover {
+	color: rgba(255,210,0,1.00);
+}
+.btn-rojo {
+	color: rgba(255,255,255,1.00);
+	background-color: rgba(255,0,0,1.00);
+}
+.btn-rojo:hover {
+	color: rgba(255,210,0,1.00);
+}
+.contra{
+	position: relative;
+}
+.contraM{
+	position: relative;
+}
+.contraI{
+	position: absolute;
+	color: transparent !important;
+	background: transparent;
+	border:none;
+	margin-left: -125px;
+	bottom: 8px;
+	outline: none;
+}
+@media screen and (min-width: 1280px) {
+.grid-recibo {
+		margin: 0 auto 20px;
+		width: 1270px;
+		display: grid;
+		grid-template-columns: 600px 660px;
+		grid-template-areas: "cancelacomp recibopago";
+		grid-gap: 10px;
+		text-align: center;
+	}
+	.grid-nota-credito {
+		margin: 0 auto 20px;
+		width: 1270px;
+		display: grid;
+		grid-template-columns: 600px 660px;
+		grid-template-areas: "cancelacomp notacredito";
+		grid-gap: 10px;
+		text-align: center;
+	}
+	.grid-nota-debito {
+		margin: 0 auto 20px;
+		width: 1140px;
+		display: grid;
+		grid-template-columns: 440px 680px;
+		grid-template-areas: "afectacomp notadebito";
+		grid-gap: 10px;
+		text-align: center;
+	}
+}
